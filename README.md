@@ -17,3 +17,5 @@ var myScroller = new ScrollToggle($('#block1').position().top, function () {
     console.log("Element is gone.");
 });
 </pre>
+
+A working example can be found here: http://kroltech.com/uploads/misc/slideToggle_Sample/
