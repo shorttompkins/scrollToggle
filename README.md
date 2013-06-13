@@ -8,10 +8,12 @@ To use:
 *Include jQuery and scrollToggle.js
 
 //ScrollToggle(verticalScrollTriggerPosition, callbackScrolledTO, callbackScrolledAWAY)
-//verticalScrollTriggerPosition can be a number, property, or computed.  It is the vertical Y coord of the scrollbar destination.
 
+//verticalScrollTriggerPosition can be a number, property, or computed.  It is the vertical Y coord of the scrollbar destination.
+<pre>
 var myScroller = new ScrollToggle($('#block1').position().top, function () {
     console.log("Element has been reached.");
 }, function () {
     console.log("Element is gone.");
 });
+</pre>
