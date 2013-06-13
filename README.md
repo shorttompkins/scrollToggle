@@ -18,4 +18,4 @@ var myScroller = new ScrollToggle($('#block1').position().top, function () {
 });
 </pre>
 
-A working example can be found here: http://kroltech.com/uploads/misc/slideToggle_Sample/
+A working example can be found here: http://kroltech.com/uploads/misc/scrollToggle_Sample/
