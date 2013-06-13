@@ -28,14 +28,3 @@ var ScrollToggle = function (top, callbackShow, callbackHide) {
         });
     })();
 };
-
-
-
-
-var scroller = new ScrollToggle($($self.attr('href')).position().top, function () {
-    $('#vertnav a').removeClass('active');
-    $self.addClass('active');
-}, function () {
-    $('#vertnav a').removeClass('active');
-    $self.prev().addClass('active');
-});
