@@ -1,0 +1,54 @@
+<html>
+    <head>  
+        <title>ScrollToggle Example Page</title>
+        <link href="//raw.github.com/twitter/bootstrap/master/docs/assets/css/bootstrap.css" rel="stylesheet">
+    </head>
+    <body>
+        <div class="row" style="width: 1000px; margin: 0 auto;">
+            <div class="span12">
+                <p>This is a sample page.  There are a few block elements below that will console.log() as you reach them by scrolling down.  They will also console.log() when you scroll back up and they are gone again.</p>
+                <br /><br />
+                <p>Scroll down...</p>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <pre id="block1">
+                    Here is some random block of content...(keep scrolling)
+                </pre>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <pre id="block2">
+                    Here is some random block of content...(keep scrolling)
+                </pre>
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+                <pre id="block3">
+                    All done.
+                </pre>
+            </div>
+        </div>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
+        <script src="scrollToggle.js" type="text/javascript"></script>
+        <script type="text/javascript">
+            $(function () {
+                //ScrollToggle(verticalScrollTriggerPosition, callbackScrolledTO, callbackScrolledAWAY)
+                var scroller1 = new ScrollToggle($('#block1').position().top, function () {
+                    console.log("Element #1 has been reached.");
+                }, function () {
+                    console.log("Element #1 is gone.");
+                });
+
+                var scroller2 = new ScrollToggle($('#block2').position().top, function () {
+                    console.log("Element #2 has been reached.");
+                }, function () {
+                    console.log("Element #2 is gone.");
+                });
+
+                var scroller3 = new ScrollToggle($('#block3').position().top, function () {
+                    console.log("Element #3 has been reached.");
+                }, function () {
+                    console.log("Element #3 is gone.");
+                });
+            });
+        </script>
+    </body>
+</html>
