@@ -1,7 +1,8 @@
+<!DOCTYPE html>
 <html>
     <head>  
         <title>ScrollToggle Example Page</title>
-        <link href="//raw.github.com/twitter/bootstrap/master/docs/assets/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap.css" media="screen" rel="stylesheet">
     </head>
     <body>
         <div class="row" style="width: 1000px; margin: 0 auto;">
@@ -29,21 +30,25 @@
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.1/jquery.min.js" type="text/javascript"></script>
         <script src="scrollToggle.js" type="text/javascript"></script>
         <script type="text/javascript">
+            var height = $(window).height();
             $(function () {
                 //ScrollToggle(verticalScrollTriggerPosition, callbackScrolledTO, callbackScrolledAWAY)
-                var scroller1 = new ScrollToggle($('#block1').position().top, function () {
+                //note that we subtract the height of the window from the elements TOP so that we are alerted when the element scrolls passed the BOTTOM of the window.  
+                //Sample 2 is set (as default behavior) to alert when the element is scrolled past the top of the screen.
+
+                var scroller1 = new ScrollToggle($('#block1').position().top - height, function () {
                     console.log("Element #1 has been reached.");
                 }, function () {
                     console.log("Element #1 is gone.");
                 });
 
                 var scroller2 = new ScrollToggle($('#block2').position().top, function () {
-                    console.log("Element #2 has been reached.");
+                    console.log("Element #2 just hit the top of the screen.");
                 }, function () {
-                    console.log("Element #2 is gone.");
+                    console.log("Element #2 was just scrolled past.");
                 });
 
-                var scroller3 = new ScrollToggle($('#block3').position().top, function () {
+                var scroller3 = new ScrollToggle($('#block3').position().top - height, function () {
                     console.log("Element #3 has been reached.");
                 }, function () {
                     console.log("Element #3 is gone.");
