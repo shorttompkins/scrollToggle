@@ -18,7 +18,7 @@ var myScroller = new ScrollToggle($('#block1').position().top, function () {
 });
 </pre>
 
-A working example can be found here: http://kroltech.com/uploads/misc/scrollToggle_Sample/
+A working example can be found here: http://kroltech.com/upload/misc/scrollToggle_Sample/
 
 A better production sample can be found here: http://www.nextgenugm.com 
 (the orange dots in the right vertical nav change based on the sections as they scroll into view).
